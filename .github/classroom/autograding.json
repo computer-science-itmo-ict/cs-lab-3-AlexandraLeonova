@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "cs-lab-3",
-      "setup": "",
+      "setup": "LC_ALL='en_US.UTF-8'",
       "run": "python tester_3.pyc",
       "input": "",
       "output": "PASSED",
