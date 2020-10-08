@@ -7,7 +7,7 @@
       "input": "",
       "output": "PASSED",
       "comparison": "exact",
-      "timeout": 3,
+      "timeout": 10,
       "points": 3
     }
   ]
