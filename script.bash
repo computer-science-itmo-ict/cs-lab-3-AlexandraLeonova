@@ -49,12 +49,12 @@ f="file"
 f2="files"
 d="directory"
 d2="directories"
-if [[ $dirs_count -eq 1]]
+if [[ $dirs_count -eq 1 ]]
 then vivo=$d
 else vivo=$d2
 fi
-if [[ $files_count -eq 1]]
+if [[ $files_count -eq 1 ]]
 then vivod=$f
 else vivod=$f2
 fi
-echo "$dirs_count $vivo, $files_count $vivod"
+echo "$dirs_count $vivo , $files_count $vivod"
