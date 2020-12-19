@@ -8,6 +8,7 @@ if [ "$1" = "" ]
 	current_dir="$1"
 	paremeter=$1
 fi
+
 echo "$parameter"
 
 files_count=0
@@ -16,12 +17,15 @@ dirs_count=0
 search() {
   local dir=$1
     local parent=$2
+
     local list=($dir/*)
+
     local len_list="${#list[@]}"
+
 		
 	for each in "${!list[@]}"
 	do
-			local parent_add=$'\u2502\u00A0\u00A0\u00A0'
+			local parent_add=$'\u2502\u00A0\u00A0\u0020'
 			local child=$'\u251c\u2500\u2500\u0020'
 			local name=${list[$each]}
 			name=${name##*/}
@@ -49,12 +53,13 @@ f="file"
 f2="files"
 d="directory"
 d2="directories"
+
 if [[ $dirs_count -eq 1 ]]
-then vivo=$d
-else vivo=$d2
+then sasha=$d
+else sasha=$d2
 fi
 if [[ $files_count -eq 1 ]]
-then vivod=$f
-else vivod=$f2
+then sashas=$f
+else sashas=$f2
 fi
-echo "$dirs_count $vivo , $files_count $vivod"
+echo "$dirs_count $sasha, $files_count $sashas"
