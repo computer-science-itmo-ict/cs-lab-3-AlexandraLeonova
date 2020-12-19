@@ -16,22 +16,22 @@ dirs_count=0
 
 search() {
   local dir=$1
-    local parent=$2
+	 local parent=$2
 
-    local list=($dir/*)
+	 local list=($dir/*)
 
-    local len_list="${#list[@]}"
+	 local len_list="${#list[@]}"
 
-		
-	for each in "${!list[@]}"
-	do
+	 for each in "${!list[@]}"
+	 do
 			local parent_add=$'\u2502\u00A0\u00A0\u0020'
 			local child=$'\u251c\u2500\u2500\u0020'
+
 			local name=${list[$each]}
 			name=${name##*/}
 			
 			if [ $each -eq $((len_list-1)) ]
-			then 
+			then
 				child=$'\u2514\u2500\u2500\u0020'
 				parent_add=$'\u0020\u0020\u0020\u0020'
 			fi
@@ -63,3 +63,4 @@ then sashas=$f
 else sashas=$f2
 fi
 echo "$dirs_count $sasha, $files_count $sashas"
+
