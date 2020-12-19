@@ -6,7 +6,7 @@ if [ "$1" = "" ]
 	parameter="."
 	else
 	current_dir="$1"
-	paremeter=$1
+	parameter=$1
 fi
 
 echo "$parameter"
