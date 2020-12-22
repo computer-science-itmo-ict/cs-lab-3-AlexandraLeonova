@@ -14,6 +14,8 @@ echo "$parameter"
 files_count=0
 dirs_count=0
 
+
+
 search() {
    local dir=$1
        local parent=$2
@@ -24,20 +26,23 @@ search() {
 
        for each in "${!list[@]}"
        do
+
+
 		local parent_add=$'\u2502\u00A0\u00A0\u0020'
 		local child=$'\u251c\u2500\u2500\u0020'
 
 		local name=${list[$each]}
 		name=${name##*/}
-			
+
 		if [ $each -eq $((len_list-1)) ]
 		then
 			child=$'\u2514\u2500\u2500\u0020'
 			parent_add=$'\u0020\u0020\u0020\u0020'
 		fi
-			
+
+
 		echo "$parent$child$name"
-			
+
 		if [ -d "$dir/$name" ]
 		then
 			dirs_count=$((dirs_count+1))
